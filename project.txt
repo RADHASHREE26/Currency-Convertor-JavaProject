@@ -1,0 +1,218 @@
+package extra;
+import java.util.*;
+import java.text.NumberFormat;
+
+public class CurrencyConvertor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		double money, dollar, pound, euro, yen, rupee;
+		
+        /* Create NumberFormats using Locales */
+		
+		Locale indiaLocale = new Locale("en", "IN");
+        NumberFormat us     = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat india  = NumberFormat.getCurrencyInstance(indiaLocale);
+        NumberFormat uk  = NumberFormat.getCurrencyInstance(Locale.UK);
+        NumberFormat europe = NumberFormat.getCurrencyInstance(Locale.GERMANY);
+        NumberFormat japan = NumberFormat.getCurrencyInstance(Locale.JAPAN);
+        
+        
+		System.out.println("Convert ?:");
+		System.out.println("1. IN Rupee");
+		System.out.println("2. US Dollar");
+		System.out.println("3. GB Pound");
+		System.out.println("4. Euro");
+		System.out.println("5. JP Yen");
+		
+		int ch1=sc.nextInt();
+		
+		switch (ch1)
+		{
+		case 1:
+			
+			System.out.println("To ?:");
+			System.out.println("1. US Dollar");
+			System.out.println("2. GB Pound");
+			System.out.println("3. Euro");
+			System.out.println("4. JP Yen");
+			int c1=sc.nextInt();
+			System.out.println("Enter amount of money:");
+			money=sc.nextInt();
+			
+			switch (c1)
+			{
+			case 1:
+				dollar=money*0.0135;
+				System.out.println(money+" IN Rupees = "+ us.format(dollar)+" US Dollars");
+				break;
+			case 2:
+				pound=money*0.0097;
+				System.out.println(money+" IN Rupees = "+ uk.format(pound)+" GB Pound");
+				break;
+			case 3:
+				euro=money*0.0115;
+				System.out.println(money+" IN Rupees = "+ europe.format(euro)+" Euro");
+				break;
+			case 4:
+				yen=money*1.4862;
+				System.out.println(money+" IN Rupees = "+ japan.format(yen)+" JP Yen");
+				break;
+			default:
+				System.out.println("Invalid Choice");
+				break;
+			}
+			
+			break;
+			
+		case 2:
+			
+			System.out.println("To ?:");
+			System.out.println("1. IN Rupee");
+			System.out.println("2. GB Pound");
+			System.out.println("3. Euro");
+			System.out.println("4. JP Yen");
+			int c2=sc.nextInt();
+			System.out.println("Enter amount of money:");
+			money=sc.nextInt();
+			
+			switch (c2)
+			{
+			case 1:
+				rupee=money*74.2875;
+				System.out.println(money+" US Dollars = "+ india.format(rupee)+" IN Rupees");
+				break;
+			case 2:
+				pound=money*0.724;
+				System.out.println(money+" US Dollars = "+ uk.format(pound)+" GB Pound");
+				break;
+			case 3:
+				euro=money*0.852;
+				System.out.println(money+" US Dollars = "+ europe.format(euro)+" Euro");
+				break;
+			case 4:
+				yen=money*110.4045;
+				System.out.println(money+" US Dollars = "+ japan.format(yen)+" JP Yen");
+				break;
+			default:
+				System.out.println("Invalid Choice");
+				break;
+			}
+			
+			break;
+			
+		case 3:
+			
+			System.out.println("To ?:");
+			System.out.println("1. IN Rupee");
+			System.out.println("2. US Dollar");
+			System.out.println("3. Euro");
+			System.out.println("4. JP Yen");
+			int c3=sc.nextInt();
+			System.out.println("Enter amount of money:");
+			money=sc.nextInt();
+			
+			switch (c3)
+			{
+			case 1:
+				rupee=money*102.585;
+				System.out.println(money+" GB Pound = "+ india.format(rupee)+" IN Rupees");
+				break;
+			case 2:
+				dollar=money*1.3806;
+				System.out.println(money+" GB Pound = "+ us.format(dollar)+" US Dollars");
+				break;
+			case 3:
+				euro=money*1.1766;
+				System.out.println(money+" GB Pound = "+ europe.format(euro)+" Euro");
+				break;
+			case 4:
+				yen=money*152.2685;
+				System.out.println(money+" GB Pound = "+ japan.format(yen)+" JP Yen");
+				break;
+			default:
+				System.out.println("Invalid Choice");
+				break;
+			}
+			break;
+			
+		case 4:
+			
+			System.out.println("To ?:");
+			System.out.println("1. IN Rupee");
+			System.out.println("2. US Dollar");
+			System.out.println("3. GB Pound");
+			System.out.println("4. JP Yen");
+			int c4=sc.nextInt();
+			System.out.println("Enter amount of money:");
+			money=sc.nextInt();
+			
+			switch (c4)
+			{
+			case 1:
+				rupee=money*102.585;
+				System.out.println(money+" Euro = "+ india.format(rupee)+" IN Rupees");
+				break;
+			case 2:
+				dollar=money*1.3806;
+				System.out.println(money+" Euro = "+ us.format(dollar)+" US Dollars");
+				break;
+			case 3:
+				pound=money*0.724;
+				System.out.println(money+" Euro = "+ uk.format(pound)+" GB Pound");
+				break;
+			case 4:
+				yen=money*152.2685;
+				System.out.println(money+" Euro = "+ japan.format(yen)+" JP Yen");
+				break;
+			default:
+				System.out.println("Invalid Choice");
+				break;
+			}
+			break;
+			
+		case 5:
+			
+			System.out.println("To ?:");
+			System.out.println("1. IN Rupee");
+			System.out.println("2. US Dollar");
+			System.out.println("3. GB Pound");
+			System.out.println("4. Euro");
+			int c5=sc.nextInt();
+			System.out.println("Enter amount of money:");
+			money=sc.nextInt();
+			
+			switch (c5)
+			{
+			case 1:
+				rupee=money*0.6736;
+				System.out.println(money+" JP Yen = "+ india.format(rupee)+" IN Rupees");
+				break;
+			case 2:
+				dollar=money*0.0091;
+				System.out.println(money+" JP Yen = "+ us.format(dollar)+" US Dollars");
+				break;
+			case 3:
+				pound=money*0.0066;
+				System.out.println(money+" JP Yen = "+ uk.format(pound)+" GB Pound");
+				break;
+			case 4:
+				euro=money*0.0077;
+				System.out.println(money+" JP Yen = "+ europe.format(euro)+" Euro");
+				break;
+			default:
+				System.out.println("Invalid Choice");
+				break;
+			}
+			break;
+			
+			default:
+			System.out.println("Invalid Choice");
+			break;
+		}
+		
+
+	}
+
+}
